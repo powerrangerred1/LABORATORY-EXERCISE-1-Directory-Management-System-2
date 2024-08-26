@@ -15,3 +15,10 @@ void list_files(const string& path) {
         cout << "No files found or directory does not exist.\n";
         return;
     }
+  while ((entry = readdir(dir)) != NULL) {
+        if (entry->d_type != DT_DIR) {  
+            cout << entry->d_name << endl;
+        }
+    }
+    closedir(dir);
+
