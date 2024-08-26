@@ -43,7 +43,10 @@ if ((dir = opendir(path.c_str())) == NULL) {
         if (filename.find(extension) != string::npos && entry->d_type != DT_DIR) {
             cout << filename << endl;
         }
-    }
-    closedir(dir);
-}
+
+void list_files_by_name() {
+    string name;
+    cout << "Enter file name (use * as wildcard, e.g., *.txt): ";
+    cin >> name;
+    cin.ignore();
 
