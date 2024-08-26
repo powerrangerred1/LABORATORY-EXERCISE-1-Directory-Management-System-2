@@ -33,3 +33,17 @@ void list_files_by_extension() {
     DIR* dir;
     struct dirent* entry;
 
+if ((dir = opendir(path.c_str())) == NULL) {
+        cout << "No files found or directory does not exist.\n";
+        return;
+    }
+
+    while ((entry = readdir(dir)) != NULL) {
+        string filename = entry->d_name;
+        if (filename.find(extension) != string::npos && entry->d_type != DT_DIR) {
+            cout << filename << endl;
+        }
+    }
+    closedir(dir);
+}
+
