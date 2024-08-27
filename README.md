@@ -63,5 +63,21 @@ void create_directory() {
         cout << "Failed to create directory or directory already exists.\n";
     }
 }
+void change_directory() {
+    cout << "1. Go up one level\n2. Go to root directory\n3. Go to a specific directory\n";
+    int choice;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    cin.ignore();  
+
+    switch (choice) {
+        case 1: {
+            if (chdir("..") == 0) {
+                cout << "Moved up one level.\n";
+            } else {
+                cout << "Error moving up.\n";
+            }
+            break;
+        }
 
 
