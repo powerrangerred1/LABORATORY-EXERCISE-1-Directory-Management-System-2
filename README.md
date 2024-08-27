@@ -22,7 +22,7 @@ void list_files(const string& path) {
     }
     closedir(dir);
     }
-    
+    }
 void list_files_by_extension() {
     string extension;
     cout << "Enter file extension (e.g., .txt): ";
