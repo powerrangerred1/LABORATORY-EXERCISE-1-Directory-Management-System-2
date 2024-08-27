@@ -50,3 +50,18 @@ void list_files_by_name() {
     cin >> name;
     cin.ignore();
 
+    cout << "Wildcard search not supported in this platform version.\n";
+}
+void create_directory() {
+    string dir_name;
+    cout << "Enter directory name: ";
+    getline(cin, dir_name);
+
+    if (mkdir(dir_name.c_str(), 0777) == 0) {
+        cout << "Directory created.\n";
+    } else {
+        cout << "Failed to create directory or directory already exists.\n";
+    }
+}
+
+
