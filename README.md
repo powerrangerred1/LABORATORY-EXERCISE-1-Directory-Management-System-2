@@ -112,6 +112,22 @@ void showFileListMenu() {
         cout << "Enter the Number: ";
         cin >> fileChoice;
         cin.ignore();  
+switch (fileChoice) {
+            case 1:
+                list_files(".");
 
+break;
+            case 2:
+                list_files_by_extension();
+                break;
+            case 3:
+                list_files_by_name();
+                break;
+            default:
+                cout << "Invalid choice.\n";
+                break;
+        }
+    } while (fileChoice < 1 || fileChoice > 3);  
+}
 
 
