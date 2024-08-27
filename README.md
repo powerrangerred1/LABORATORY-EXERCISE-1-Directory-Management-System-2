@@ -80,4 +80,22 @@ void change_directory() {
             break;
         }
 
+case 2:
+            if (chdir("/") == 0) {
+                cout << "Moved to root directory.\n";
+            } else {
+                cout << "Error changing to root directory.\n";
+            }
+            break;
+        case 3: {
+            string new_dir;
+            cout << "Enter path: ";
+            getline(cin, new_dir);
+            if (chdir(new_dir.c_str()) == 0) {
+                cout << "Changed to directory: " << new_dir << endl;
+            } else {
+                cout << "Directory does not exist.\n";
+            }
+            break;
+        }
 
