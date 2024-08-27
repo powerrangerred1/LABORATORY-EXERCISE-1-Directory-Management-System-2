@@ -98,4 +98,20 @@ case 2:
             }
             break;
         }
+        }
+void showFileListMenu() {
+    int fileChoice;
+
+    do {
+        cout << "\n";
+        cout << " LIST FILE DETAILS\n"; 
+        cout << "------------------\n";
+        cout << "1. List All Files\n";
+        cout << "2. List by Extension\n";
+        cout << "3. List by Name\n"; 
+        cout << "Enter the Number: ";
+        cin >> fileChoice;
+        cin.ignore();  
+
+
 
